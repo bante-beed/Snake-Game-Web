@@ -1,3 +1,6 @@
+#贪吃蛇游戏
+在线访问地址:
+http://bante-beed.github.io/Snake-Game-Web/
 # 🐍 贪吃蛇游戏 - Web版本
 
 一个使用纯HTML5、CSS3和JavaScript开发的现代化贪吃蛇游戏，支持桌面和移动设备。
