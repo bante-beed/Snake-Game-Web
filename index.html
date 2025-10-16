@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇游戏 - Web版</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1 class="game-title">
+                <span class="snake-emoji">🐍</span>
+                贪吃蛇游戏
+                <span class="snake-emoji">🍎</span>
+            </h1>
+            <div class="score-container">
+                <div class="score-item">
+                    <span class="score-label">分数:</span>
+                    <span id="score" class="score-value">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">最高分:</span>
+                    <span id="highScore" class="score-value">0</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-area">
+            <canvas id="gameCanvas" width="600" height="400"></canvas>
+            
+            <div id="gameOverlay" class="game-overlay hidden">
+                <div class="overlay-content">
+                    <h2 id="overlayTitle">游戏暂停</h2>
+                    <p id="overlayMessage">按空格键继续游戏</p>
+                    <div class="overlay-buttons">
+                        <button id="resumeBtn" class="btn btn-primary">继续游戏</button>
+                        <button id="restartBtn" class="btn btn-secondary">重新开始</button>
+                        <button id="quitBtn" class="btn btn-danger">退出游戏</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="gameStart" class="game-start">
+                <div class="start-content">
+                    <h2>欢迎来到贪吃蛇游戏!</h2>
+                    <p>使用方向键控制蛇的移动，吃掉食物获得分数</p>
+                    <button id="startGameBtn" class="btn btn-primary btn-large">开始游戏</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-controls">
+            <div class="control-section">
+                <h3>游戏控制</h3>
+                <div class="control-grid">
+                    <div class="control-item">
+                        <span class="control-key">↑</span>
+                        <span class="control-desc">向上移动</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">↓</span>
+                        <span class="control-desc">向下移动</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">←</span>
+                        <span class="control-desc">向左移动</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">→</span>
+                        <span class="control-desc">向右移动</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">空格</span>
+                        <span class="control-desc">暂停/继续</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">R</span>
+                        <span class="control-desc">重新开始</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-controls">
+                <h3>手机控制</h3>
+                <div class="mobile-buttons">
+                    <div class="mobile-row">
+                        <button class="mobile-btn" data-direction="up">↑</button>
+                    </div>
+                    <div class="mobile-row">
+                        <button class="mobile-btn" data-direction="left">←</button>
+                        <button class="mobile-btn" data-direction="down">↓</button>
+                        <button class="mobile-btn" data-direction="right">→</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="game-footer">
+            <p>使用 HTML5 Canvas 和 JavaScript 制作 | 适配桌面和移动设备</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
